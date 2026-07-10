@@ -1,5 +1,5 @@
 # SVVST Website - Documentation
-Welcome to the documentation for the Shri Veda Vyasa Seva Trust (SVVST) website. This readme/documentation collects implementation details, how to run and build the project, and notes for making changes without confusion.
+Welcome to the documentation for the Shri Veda Vyasa Seva Trust (SVVST) website! This readme/documentation collects implementation details, how to run and build the project, and notes for making changes without confusion.
 - For live demo, check https://www.shrivedavyasatrust.in/
 
 ## Project overview

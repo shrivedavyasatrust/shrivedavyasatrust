@@ -1,0 +1,832 @@
+/* General */
+html {
+	/* Resetting the default box-sizing for better consistency */
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+    /* Setting universal font size to be utilised by 'rem' unit */
+    font-size: 16px;
+}
+
+body {
+    background-color: #161718;
+}
+
+*, *::before, *::after {
+	/* Ensuring all elements use the same box-sizing model */
+    box-sizing: inherit;
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    text-decoration: none;
+}
+
+
+
+/* Scrollbar styling */
+/* Target the entire scrollbar */
+::-webkit-scrollbar {
+  width: 4px;
+  height: 4px; /* for horizontal scrollbar */
+}
+
+/* Track style */
+::-webkit-scrollbar-track {
+  background: #1e1e1e;
+}
+
+/* Handle (the draggable part) */
+::-webkit-scrollbar-thumb {
+  background-color: #F27A1A;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #f1a363;
+}
+
+/* Hero Section */
+.hero-container {
+    user-select: none;
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    background-color: #161718;
+}
+
+.hero-background {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    opacity: 0;
+    transform: scale(1);
+    transition: opacity 2s ease-in;
+    animation: zoomIn 30s ease-in-out infinite;
+    z-index: 1;
+}
+
+.hero-background.active {
+    opacity: 1;
+    z-index: 2;
+}
+
+@keyframes zoomIn {
+    0% {
+      transform: scale(1);
+    }
+    50% {
+      transform: scale(1.10);
+    }
+    100% {
+      transform: scale(1);
+    }
+}
+
+.hero-overlay {
+  position: relative;
+  z-index: 3;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background: linear-gradient(
+    180deg, 
+    rgba(22, 23, 24, 0.14) 0%, 
+    rgba(22, 23, 24, 0.7) 100%
+  );
+  padding: clamp(1.5rem, 5vw, 4rem);
+  font-family: 'Titillium Web', sans-serif;
+  color: whitesmoke;
+}
+
+.hero-overlay .hero-header {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.hero-overlay .hero-logo-lockup {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  background: rgba(255,255,255,0.03);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  padding: 0.5rem 1.25rem 0.5rem 0.5rem;
+  border-radius: 100px;
+  border: 1px solid rgba(255,255,255,0.08);
+}
+
+.hero-overlay .hero-logo-img {
+  width: clamp(3rem, 10vw, 5rem);
+  height: clamp(3rem, 10vw, 5rem);
+  object-fit: contain;
+}
+
+.hero-overlay .hero-trust-name {
+  font-family: 'Oswald', sans-serif;
+  font-size: 1.125rem;
+  font-weight: 500;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+}
+
+.hero-overlay .hero-main {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+}
+
+@media (min-width: 768px) {
+  .hero-overlay .hero-main {
+    flex-direction: row;
+    align-items: flex-end;
+    justify-content: space-between;
+    gap: 4rem;
+  }
+}
+
+.hero-overlay .hero-title-wrapper {
+  flex: 1;
+  max-width: 800px;
+}
+
+.hero-overlay .hero-title {
+  font-family: 'Oswald', sans-serif;
+  font-size: clamp(2.5rem, 5vw, 4.5rem);
+  font-weight: 700;
+  line-height: 1.05;
+  letter-spacing: -0.02em;
+  margin: 0;
+  text-transform: uppercase;
+  text-wrap: balance;
+}
+
+.hero-overlay .hero-title .accent-word {
+  color: #F27A1A;
+}
+
+.hero-overlay .hero-nav {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 0.75rem;
+  width: 100%;
+}
+
+@media (min-width: 768px) {
+  .hero-overlay .hero-nav {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    width: auto;
+    padding-bottom: 0.5rem;
+  }
+}
+
+.hero-overlay .hero-nav-item {
+  font-family: 'Oswald', sans-serif;
+  font-size: clamp(0.9rem, 2vw, 1.25rem);
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: whitesmoke;
+  text-decoration: none;
+  padding: 0.75rem 1rem;
+  border-radius: 100px;
+  transition: all 0.4s cubic-bezier(0.25, 1, 0.5, 1);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.5rem;
+  background: rgba(242, 122, 26, 0.15);
+  border: 1px solid rgba(242, 122, 26, 0.3);
+}
+
+.hero-overlay .nav-arrow {
+  opacity: 0.5;
+  transform: translateX(-4px);
+  transition: all 0.4s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+.hero-overlay .hero-nav-item:hover .nav-arrow {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.hero-overlay .hero-nav-item:hover {
+  background: #F27A1A;
+  border-color: #F27A1A;
+  color: #161718;
+  transform: translateY(-2px);
+}
+
+
+/* Ethos Section */
+.ethos-section {
+  background-color: #161718;
+  color: whitesmoke;
+  padding: clamp(6rem, 15vw, 12rem) clamp(1.5rem, 5vw, 4rem);
+  user-select: none;
+  border-top: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.ethos-container {
+  max-width: 1400px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 4rem;
+}
+
+@media (min-width: 1024px) {
+  .ethos-container {
+    grid-template-columns: 4fr 5fr;
+    gap: 8rem;
+    align-items: start;
+  }
+  
+  .ethos-manifesto {
+    position: sticky;
+    top: clamp(6rem, 10vh, 10rem);
+  }
+}
+
+.ethos-title {
+  font-family: "Oswald", sans-serif;
+  font-size: clamp(3.5rem, 8vw, 6.5rem);
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: -0.02em;
+  line-height: 1;
+  color: whitesmoke;
+  margin-bottom: 2rem;
+}
+
+.ethos-title .highlight {
+  color: #F27A1A;
+  display: block;
+}
+
+.ethos-intro {
+  font-family: "Titillium Web", sans-serif;
+  font-size: clamp(1.25rem, 3vw, 1.75rem);
+  font-weight: 300;
+  color: #a0a0a0;
+  line-height: 1.5;
+  max-width: 30ch;
+}
+
+.ethos-details {
+  display: flex;
+  flex-direction: column;
+  gap: clamp(4rem, 8vw, 6rem);
+  padding-top: 1rem;
+}
+
+.ethos-block {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.ethos-label {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  font-family: "Oswald", sans-serif;
+  font-size: 1rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: #F27A1A;
+}
+
+.ethos-label::before {
+  content: "";
+  display: block;
+  width: 2rem;
+  height: 2px;
+  background-color: #F27A1A;
+}
+
+.ethos-text {
+  font-family: "Titillium Web", sans-serif;
+  font-size: clamp(1.5rem, 4vw, 2.25rem);
+  font-weight: 300;
+  line-height: 1.4;
+  color: whitesmoke;
+  text-wrap: pretty;
+}
+
+.ethos-values-list {
+  list-style: none;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem 1.5rem;
+  font-family: "Oswald", sans-serif;
+  font-size: clamp(1.25rem, 3vw, 1.75rem);
+  font-weight: 400;
+  color: whitesmoke;
+  margin-top: 0.5rem;
+}
+
+@media (min-width: 768px) {
+  .ethos-values-list {
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  }
+}
+
+.ethos-values-list li {
+  position: relative;
+  padding-left: 1.5rem;
+}
+
+.ethos-values-list li::before {
+  content: "-";
+  position: absolute;
+  left: 0;
+  color: rgba(255, 255, 255, 0.2);
+  transition: color 0.3s ease;
+}
+
+.ethos-values-list li:hover::before {
+  color: #F27A1A;
+}
+
+/* Events Section */
+.events-section {
+  background-color: #161718;
+  padding: clamp(4rem, 10vw, 8rem) clamp(1.5rem, 5vw, 4rem);
+}
+
+.events-container {
+  max-width: 1400px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: clamp(3rem, 6vw, 4rem);
+}
+
+.events-header {
+  text-align: center;
+}
+
+.events-title {
+  font-family: "Oswald", sans-serif;
+  font-size: clamp(3rem, 6vw, 5rem);
+  color: whitesmoke;
+  text-transform: uppercase;
+  letter-spacing: -0.02em;
+  margin-bottom: 1rem;
+}
+
+.events-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 2rem;
+}
+
+.event-card {
+  background-color: #1E2125;
+  border-radius: 12px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  border: 1px solid transparent;
+  transition: transform 400ms cubic-bezier(0.16, 1, 0.3, 1), border-color 400ms ease;
+}
+
+.event-card:hover {
+  transform: translateY(-8px);
+  border-color: rgba(242, 122, 26, 0.3);
+}
+
+.event-card-img-wrapper {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 16/9;
+  overflow: hidden;
+}
+
+.event-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 700ms cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.event-card:hover .event-img {
+  transform: scale(1.05);
+}
+
+.event-card-content {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  padding: 1.5rem;
+  flex: 1;
+}
+
+.event-card-header {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.event-card-title {
+  font-family: "Oswald", sans-serif;
+  font-size: 1.5rem;
+  color: whitesmoke;
+  font-weight: 500;
+  line-height: 1.2;
+}
+
+.event-card-meta {
+  font-family: "Titillium Web", sans-serif;
+  font-size: 0.9rem;
+  color: #F27A1A;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  font-weight: 600;
+}
+
+.event-card-desc {
+  font-family: "Titillium Web", sans-serif;
+  font-size: 1rem;
+  color: #cccccc;
+  line-height: 1.5;
+  flex: 1;
+}
+
+.event-card-footer {
+  margin-top: 1rem;
+  padding-top: 1rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.btn-secondary {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: transparent;
+  color: whitesmoke;
+  font-family: "Oswald", sans-serif;
+  font-size: 1rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  padding: 0.5rem 0;
+  border: none;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+.btn-secondary:hover {
+  color: #F27A1A;
+}
+
+/* Modal CSS */
+.modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(22, 23, 24, 0.9);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  padding: clamp(1rem, 4vw, 2rem);
+  opacity: 0;
+  animation: modalFadeIn 0.3s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+@keyframes modalFadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+.modal-content {
+  background: #1E2125;
+  width: 100%;
+  max-width: 1000px;
+  max-height: 90vh;
+  border-radius: 16px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  box-shadow: 0 24px 48px rgba(0, 0, 0, 0.4);
+  transform: translateY(20px) scale(0.98);
+  animation: modalSlideUp 0.4s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+@keyframes modalSlideUp {
+  to { transform: translateY(0) scale(1); }
+}
+
+.modal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.5rem 2rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.modal-title {
+  font-family: "Oswald", sans-serif;
+  font-size: 1.75rem;
+  color: whitesmoke;
+  margin: 0;
+}
+
+.modal-close-btn {
+  background: rgba(255, 255, 255, 0.05);
+  border: none;
+  color: whitesmoke;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.modal-close-btn:hover {
+  background: rgba(242, 122, 26, 0.2);
+  color: #F27A1A;
+}
+
+.modal-body {
+  padding: 2rem;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.modal-gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.5rem;
+  align-items: start;
+}
+
+.modal-gallery-img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 8px;
+}
+
+.modal-footer {
+  padding: 1.5rem 2rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.05);
+  display: flex;
+  justify-content: flex-end;
+}
+
+.btn-primary {
+  background: #F27A1A;
+  color: whitesmoke;
+  font-family: "Oswald", sans-serif;
+  font-size: 1rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  padding: 0.75rem 1.5rem;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  text-decoration: none;
+}
+
+.btn-primary:hover {
+  background: #f1a363;
+  color: #161718;
+}
+
+/* Founders Section */
+.founders-section {
+  background-color: #161718;
+  padding: clamp(3rem, 5vw, 5rem) clamp(1.5rem, 5vw, 4rem);
+  border-top: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.founders-container {
+  max-width: 1400px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: clamp(3rem, 6vw, 4rem);
+  align-items: center;
+}
+
+.founders-header {
+  text-align: center;
+}
+
+.founders-title {
+  font-family: "Oswald", sans-serif;
+  font-size: clamp(3rem, 6vw, 5rem);
+  color: whitesmoke;
+  text-transform: uppercase;
+  letter-spacing: -0.02em;
+  margin-bottom: 1rem;
+}
+
+.founders-image-wrapper {
+  width: 100%;
+  max-width: 800px;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.founders-img {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover;
+  transition: transform 700ms cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.founders-image-wrapper:hover .founders-img {
+  transform: scale(1.02);
+}
+
+/* Contact Us Section */
+.contact-section {
+  background-color: #1E2125;
+  padding: clamp(3rem, 5vw, 5rem) clamp(1.5rem, 5vw, 4rem);
+  border-top: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.contact-container {
+  max-width: 1400px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: clamp(3rem, 6vw, 4rem);
+}
+
+.contact-header {
+  text-align: center;
+}
+
+.contact-title {
+  font-family: "Oswald", sans-serif;
+  font-size: clamp(3rem, 6vw, 5rem);
+  color: whitesmoke;
+  text-transform: uppercase;
+  letter-spacing: -0.02em;
+  margin-bottom: 1rem;
+}
+
+.contact-subtitle {
+  font-family: "Titillium Web", sans-serif;
+  font-size: clamp(1.25rem, 3vw, 1.75rem);
+  font-weight: 300;
+  color: #CCCCCC;
+  line-height: 1.4;
+}
+
+.contact-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 3rem;
+  align-items: start;
+}
+
+.contact-profile {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5rem;
+  text-align: center;
+}
+
+.contact-avatar {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  overflow: hidden;
+  border: 4px solid #161718;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.4);
+}
+
+.contact-avatar img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 500ms ease;
+}
+
+.contact-profile:hover .contact-avatar img {
+  transform: scale(1.05);
+}
+
+.contact-info {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  align-items: center;
+}
+
+.contact-name {
+  font-family: "Oswald", sans-serif;
+  font-size: 1.75rem;
+  color: whitesmoke;
+  font-weight: 500;
+  letter-spacing: 0.02em;
+}
+
+.contact-role {
+  font-family: "Titillium Web", sans-serif;
+  font-size: 1.1rem;
+  color: #a0a0a0;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+}
+
+.contact-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin-top: 0.5rem;
+  color: whitesmoke;
+  text-decoration: none;
+  font-family: "Titillium Web", sans-serif;
+  font-size: 1.25rem;
+  font-weight: 300;
+  transition: color 0.3s ease;
+}
+
+.contact-link:hover {
+  color: #F27A1A;
+}
+
+.contact-icon {
+  color: #F27A1A;
+  font-size: 1.2rem;
+}
+
+.contact-address-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5rem;
+  text-align: center;
+  padding: 2rem;
+  background-color: #161718;
+  border-radius: 12px;
+  border: 1px solid rgba(255,255,255,0.05);
+}
+
+.contact-address {
+  font-family: "Titillium Web", sans-serif;
+  font-size: 1.1rem;
+  color: #cccccc;
+  line-height: 1.8;
+  font-style: normal;
+}
+
+/* Footer Section */
+.footer-section {
+  background-color: #0f1011;
+  padding: clamp(2rem, 3vw, 3rem) clamp(1.5rem, 5vw, 4rem);
+  border-top: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.footer-container {
+  max-width: 1400px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  align-items: center;
+  text-align: center;
+}
+
+@media (min-width: 768px) {
+  .footer-container {
+    flex-direction: row;
+    justify-content: space-between;
+    text-align: left;
+  }
+}
+
+.copyright-text, .copyright-credits {
+  font-family: "Titillium Web", sans-serif;
+  font-size: 1rem;
+  color: #888888;
+  margin: 0;
+}

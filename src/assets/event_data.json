@@ -1,0 +1,38 @@
+[
+  {
+    "title": "Inauguration",
+    "date": "20 April 2025",
+    "time": "4 PM - 5 PM",
+    "description": "Charitable trust inauguration ceremony, by Prof. G Nagendra Prabhu",
+    "thumbnail_img": "./event0_thumbnail.avif",
+    "images": ["./event0_1.avif", "./event0_2.avif"],
+    "galleryLink": "https://drive.google.com/drive/folders/1Rr-l1vMvhzyWyCu08l9ZPTjd50Vrjt_l?usp=sharing"
+  },
+  {
+    "title": "Vriddhi 2025",
+    "date": "23-25 May 2025",
+    "time": "9 AM - 5 PM",
+    "description": "An interactive guidance program for young students with fun games, activities (including meals)",
+    "thumbnail_img": "./event1_thumbnail.webp",
+    "images": ["./event1_1.avif", "./event1_2.avif"],
+    "galleryLink": "https://drive.google.com/drive/folders/1TwyTVuvrq_wBgdq_Du93N9LGQh2I2QTs?usp=sharing"
+  },
+  {
+    "title": "Abhivriddhi 2025",
+    "date": "28 June 2025",
+    "time": "9 AM - 5 PM",
+    "description": "Parenting class on the topic of holistic child development",
+    "thumbnail_img": "./event2_thumbnail.avif",
+    "images": ["./event2_1.avif"],
+    "galleryLink": "https://drive.google.com/drive/folders/1A0tV31NnN2Nw7PWMw2qYww2cmXf_YmNo?usp=sharing"
+  },
+  {
+    "title": "SVVST Awards 2025",
+    "date": "28 June 2025",
+    "time": "4 PM - 5 PM",
+    "description": "Award conferring ceremony to meritorious students",
+    "thumbnail_img": "./event3_thumbnail.avif",
+    "images": ["./event3_1.avif", "./event3_2.avif"],
+    "galleryLink": "https://drive.google.com/drive/folders/1lWJK3HTxsO9dZWJuUziw_EqroXXfa3O0?usp=sharing"
+  }
+]

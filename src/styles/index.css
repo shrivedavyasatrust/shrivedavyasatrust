@@ -817,8 +817,8 @@ a {
 @media (min-width: 768px) {
   .footer-container {
     flex-direction: row;
-    justify-content: space-between;
-    text-align: left;
+    justify-content: center;
+    text-align: center;
   }
 }
 

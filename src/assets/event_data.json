@@ -27,12 +27,75 @@
     "galleryLink": "https://drive.google.com/drive/folders/1A0tV31NnN2Nw7PWMw2qYww2cmXf_YmNo?usp=sharing"
   },
   {
-    "title": "SVVST Awards 2025",
+    "title": "SVVST Merit Awards 2025",
     "date": "28 June 2025",
     "time": "4 PM - 5 PM",
-    "description": "Award conferring ceremony to meritorious students",
+    "description": "Award conferring ceremony to meritorious students for 10th and 12th grade students",
     "thumbnail_img": "./event3_thumbnail.avif",
     "images": ["./event3_1.avif", "./event3_2.avif"],
     "galleryLink": "https://drive.google.com/drive/folders/1lWJK3HTxsO9dZWJuUziw_EqroXXfa3O0?usp=sharing"
+  },
+  {
+    "title": "Mayabazaar 2025",
+    "date": "10 August 2025",
+    "time": "9:30 AM - 7 PM",  
+    "description": "GSB Konkani bazaar - display and sale of items/foods/services made by GSBs, to promote GSB culture and heritage",
+    "thumbnail_img": "./event4_thumbnail.avif",
+    "images": ["./event4_1.avif", "./event4_2.avif", "./event4_3.avif"],
+    "galleryLink": "https://drive.google.com/drive/folders/1dQdywyo3D9-sHfbPqvXyMky-zFmDwJQo?usp=drive_link"
+  },
+  {
+    "title": "BMD Test 2026",
+    "date": "22 February 2026",
+    "time": "9 AM - 12 PM",  
+    "description": "Bone Mineral Density (BMD) test and orthopaedic surgeon consultation free camp for elderly",
+    "thumbnail_img": "./event5_thumbnail.avif",
+    "images": ["./event5_1.avif", "./event5_2.avif"],
+    "galleryLink": "https://drive.google.com/drive/folders/1w68T_KEhNPha1SJ9tb1BJ5Zun5oLpLEm?usp=drive_link"
+  },
+  {
+    "title": "BMD Test Follow-Up 2026",
+    "date": "5 April 2026",
+    "time": "9 AM - 12 PM",  
+    "description": "Bone Mineral Density (BMD) test and orthopaedic surgeon consultation free camp for elderly - follow up",
+    "thumbnail_img": "./event6_thumbnail.avif",
+    "images": ["./event6_1.avif", "./event6_2.avif"],
+    "galleryLink": "https://drive.google.com/drive/folders/1w68T_KEhNPha1SJ9tb1BJ5Zun5oLpLEm?usp=drive_link"
+  },
+  {
+    "title": "Abhivriddhi May 2026",
+    "date": "23 - 24 May 2026",
+    "time": "9:30 AM - 12:30 PM",  
+    "description": "An interactive guidance program for young students with fun games, activities (including meals)",
+    "thumbnail_img": "./event7_thumbnail.avif",
+    "images": ["./event7_1.avif", "./event7_2.avif", "./event7_3.avif"],
+    "galleryLink": "https://drive.google.com/drive/folders/1JKHlHkUYi1b_wlQHKNHWaYmG0V-qws62?usp=drive_link"
+  },
+  {
+    "title": "Mayabazaar 2026",
+    "date": "28 June 2026",
+    "time": "10 AM - 8 PM",  
+    "description": "An interactive guidance program for young students with fun games, activities (including meals) - follow up",
+    "thumbnail_img": "./event8_thumbnail.avif",
+    "images": ["./event8_1.avif", "./event8_2.avif", "./event8_3.avif"],
+    "galleryLink": "https://drive.google.com/drive/folders/1lGuMv-NwajFuHySnzhOiOA_bCbS0Z8y1?usp=drive_link"
+  },
+  {
+    "title": "Abhivriddhi June 2026",
+    "date": "28 June 2026",
+    "time": "9:30 AM - 3:30 PM",  
+    "description": "An interactive guidance program for young students with fun games, activities (including meals) - follow up",
+    "thumbnail_img": "./event9_thumbnail.avif",
+    "images": ["./event9_1.avif", "./event9_2.avif", "./event9_3.avif"],
+    "galleryLink": "https://drive.google.com/drive/folders/1lGuMv-NwajFuHySnzhOiOA_bCbS0Z8y1?usp=drive_link"
+  },
+  {
+    "title": "SVVST Merit Awards 2026",
+    "date": "28 June 2026",
+    "time": "3:30 PM",  
+    "description": "Award conferring ceremony to meritorious students for 10th and 12th grade students",
+    "thumbnail_img": "./event10_thumbnail.avif",
+    "images": ["./event10_1.avif", "./event10_2.avif", "./event10_3.avif"],
+    "galleryLink": "https://drive.google.com/drive/folders/1T49qkx-nttjbos4Zp7pVwH0LIkUhpvTH?usp=drive_link"
   }
 ]

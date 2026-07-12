@@ -241,7 +241,7 @@ a {
 .ethos-section {
   background-color: #161718;
   color: whitesmoke;
-  padding: clamp(6rem, 15vw, 12rem) clamp(1.5rem, 5vw, 4rem);
+  padding: clamp(1.5rem, 15vw, 5rem) clamp(1.5rem, 5vw, 4rem);
   user-select: none;
   border-top: 1px solid rgba(255, 255, 255, 0.05);
 }
@@ -372,7 +372,7 @@ a {
 /* Events Section */
 .events-section {
   background-color: #161718;
-  padding: clamp(4rem, 10vw, 8rem) clamp(1.5rem, 5vw, 4rem);
+  padding: clamp(2rem, 10vw, 2.5rem) clamp(1.5rem, 5vw, 4rem);
 }
 
 .events-container {
@@ -584,10 +584,14 @@ a {
 }
 
 .modal-gallery {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 1.5rem;
-  align-items: start;
+  column-gap: 1rem;
+  columns: 1 !important;
+}
+
+@media (min-width: 600px) {
+  .modal-gallery {
+    columns: unset;
+  }
 }
 
 .modal-gallery-img {
@@ -595,6 +599,8 @@ a {
   height: auto;
   display: block;
   border-radius: 8px;
+  break-inside: avoid;
+  margin-bottom: 1rem;
 }
 
 .modal-footer {
@@ -627,7 +633,7 @@ a {
 /* Founders Section */
 .founders-section {
   background-color: #161718;
-  padding: clamp(3rem, 5vw, 5rem) clamp(1.5rem, 5vw, 4rem);
+  padding: clamp(3rem, 5vw, 4rem) clamp(1.5em, 5vw, 4rem);
   border-top: 1px solid rgba(255, 255, 255, 0.05);
 }
 
@@ -636,7 +642,7 @@ a {
   margin: 0 auto;
   display: flex;
   flex-direction: column;
-  gap: clamp(3rem, 6vw, 4rem);
+  gap: clamp(1.5rem, 6vw, 4rem);
   align-items: center;
 }
 
@@ -646,11 +652,10 @@ a {
 
 .founders-title {
   font-family: "Oswald", sans-serif;
-  font-size: clamp(3rem, 6vw, 5rem);
+  font-size: clamp(2.5rem, 6vw, 5rem);
   color: whitesmoke;
   text-transform: uppercase;
   letter-spacing: -0.02em;
-  margin-bottom: 1rem;
 }
 
 .founders-image-wrapper {
@@ -677,7 +682,7 @@ a {
 /* Contact Us Section */
 .contact-section {
   background-color: #1E2125;
-  padding: clamp(3rem, 5vw, 5rem) clamp(1.5rem, 5vw, 4rem);
+  padding: clamp(2rem, 5vw, 4rem) clamp(1.5rem, 5vw, 4rem);
   border-top: 1px solid rgba(255, 255, 255, 0.05);
 }
 
@@ -686,7 +691,7 @@ a {
   margin: 0 auto;
   display: flex;
   flex-direction: column;
-  gap: clamp(3rem, 6vw, 4rem);
+  gap: clamp(1.5rem, 6vw, 4rem);
 }
 
 .contact-header {

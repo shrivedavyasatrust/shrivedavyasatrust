@@ -679,6 +679,26 @@ a {
   transform: scale(1.02);
 }
 
+.founders-figure {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  width: 100%;
+  max-width: 800px;
+  margin: 0;
+}
+
+.founders-caption {
+  font-family: "Titillium Web", sans-serif;
+  font-size: 0.85rem;
+  font-weight: 300;
+  color: whitesmoke;
+  text-align: center;
+  line-height: 1.6;
+  max-width: 800px;
+}
+
 /* Contact Us Section */
 .contact-section {
   background-color: #1E2125;

@@ -37,7 +37,7 @@ const ContactUs = () => {
                 <img loading="lazy" src={secretary} alt="Dr. Jayachandra Kamath, Secretary" />
               </div>
               <div className="contact-info">
-                <h3 className="contact-name">Dr. Jayachandra Kamath</h3>
+                <h3 className="contact-name">Dr. Jayachandra Kamath G</h3>
                 <p className="contact-role">Secretary</p>
                 <a className="contact-link" href="tel:+919447484009">
                   <FaPhone className="contact-icon"/>

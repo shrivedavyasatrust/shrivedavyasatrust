@@ -9,9 +9,12 @@ const Founders = () => {
         <header className="founders-header">
           <h2 className="founders-title">Founding Trustees</h2>
         </header>
-        <div className="founders-image-wrapper">
-          <img loading="lazy" src={founders} alt="Founders of Shri Veda Vyasa Seva Trust, Cherthala" className="founders-img"/>
-        </div>
+        <figure className="founders-figure">
+          <div className="founders-image-wrapper">
+            <img loading="lazy" src={founders} alt="Founders of Shri Veda Vyasa Seva Trust, Cherthala" className="founders-img"/>
+          </div>
+          <figcaption className="founders-caption">Founders of SVVST - Anandakumar T, Anirudh Krishna Kamath, Dr. Jayachandra Kamath G, Haridas Vadhyar G, Harish Krishnan, K G Prakash Bhat, Latha Devi V, Naveena Kumar S, Navinakaran V R, Santhakumar M</figcaption>
+        </figure>
       </div>
     </section>
   )

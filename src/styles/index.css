@@ -716,17 +716,23 @@ a {
 }
 
 .contact-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  display: flex;
+  flex-direction: column;
   gap: 3rem;
-  align-items: start;
+}
+
+.contact-profiles-row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 3rem;
 }
 
 .contact-profile {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 1.5rem;
+  gap: 1.2rem;
   text-align: center;
 }
 
@@ -796,6 +802,7 @@ a {
 }
 
 .contact-address-card {
+  width: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
